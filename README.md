@@ -1,4 +1,14 @@
-# signal-addon
-[![Release](https://github.com/haberda/signal-addon/actions/workflows/image.yml/badge.svg)](https://github.com/haberda/signal-addon/actions/workflows/image.yml)
+[![](logo.png)](https://github.com/Jackett/Jackett)
 
-Signal addon docker build files
+# Jackett
+
+Jackett Home Assistant add-on
+
+# How to use this add-on
+
+Install the add-on, choose your desired port, start.
+
+After the add-on is started proceed to: https://[ip]:[port] and follow the setup process.
+
+Based on the [linuxserver](https://hub.docker.com/r/linuxserver/jackett) image
+
