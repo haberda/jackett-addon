@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Runs Jackett
+# ==============================================================================
+bashio::log.info "Starting Jackett..."
+
+if bashio::config.true 'openvpn_enabled'; then
+    exec /usr/sbin/openvpn --config /etc/openvpn/config.ovpn --script-security 2 --up /etc/openvpn/up.sh --down /etc/openvpn/down.sh
+else
+    #exec s6-setuidgid jackett mono /app/Jackett/JackettConsole.exe
+    exec s6-setuidgid abc /app/Jackett/jackett --NoUpdates
+fi

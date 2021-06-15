@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+
+# Wait for jackett to become available
+bashio::net.wait_for 9117
+
+#bashio::log.info "Starting NGinx..."
+
+#exec nginx
