@@ -1,6 +1,6 @@
 # Jackett addon for Hass.io
 
-The torrent client for Hass.io with OpenVPN support.
+The torrent proxy for Hass.io with OpenVPN support.
 
 ## Installation
 
@@ -10,7 +10,7 @@ comparison to installing any other Hass.io add-on.
 1. Add https://github.com/haberda/hassio_addons to your Hass.io instance as a repository.
 1. Install the "Jackett" add-on.
 1. Start the "Jackett" add-on.
-1. Check the logs of the "Tranmission" to see if everything went well.
+1. Check the logs of the "Jackett" to see if everything went well.
 1. Open the web-ui
 
 ## Configuration
@@ -21,6 +21,7 @@ Jackett add-on configuration:
 
 ```json
 {
+  "local_network": "192.168.1.0/24",
   "log_level": "info",
   "openvpn_enabled": false,
   "openvpn_config": "",
@@ -47,6 +48,11 @@ more severe level, e.g., `debug` also shows `info` messages. By default,
 the `log_level` is set to `info`, which is the recommended setting unless
 you are troubleshooting.
 
+### Option: local_network
+
+This specifies the local LAN IP/Subnet scheme. This is to allow local LAN access when the VPN is enabled. 
+Most routers default to 192.168.1.0/24. If you don't know what yours is then leave it default.
+
 ### Option: `openvpn_enabled`
 
 Enable OpenVPN to anonymize your torrent activity.
@@ -65,4 +71,4 @@ Your OpenVPN password.
 
 ## Changelog & Releases
 
-The format of the log is based on the upstream Jackett software.
+The versioning of this add-on is based on the upstream Jackett software. However, the changelog is only releated to the add-on, not the upstream software.
