@@ -7,14 +7,13 @@
     "startup": "services",
     "webui": "http://[HOST]:[PORT:9117]",
     "panel_icon": "mdi:progress-download",
-    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "arch": ["armv7", "aarch64", "amd64"],
     "map": [
       "config:rw",
       "media:rw",
       "share:rw",
       "ssl"
     ],
-    "boot": "auto",
     "ports": {
       "9117/tcp": 9117
     },
@@ -28,8 +27,6 @@
       "/dev/net/tun"
     ],
     "hassio_api": true,
-    "homeassistant_api": false,
-    "host_network": false,
     "options": {
       "log_level": "info",
       "openvpn_enabled": false,
