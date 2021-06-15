@@ -5,6 +5,9 @@ FROM ${BUILD_FROM}
 ARG BUILD_ARCH
 ARG JACKETT_RELEASE
 
+RUN touch /etc/archecho && \
+    echo ${BUILD_ARCH} > /etc/archecho
+
 # environment settings
 ENV XDG_DATA_HOME="/data" \
     XDG_CONFIG_HOME="/data"
@@ -27,9 +30,9 @@ RUN \
 	JACKETT_RELEASE=$(curl -sX GET "https://api.github.com/repos/Jackett/Jackett/releases/latest" \
 	| jq -r .tag_name); \
   fi && \ 
-  if [${BUILD_ARCH} = "armv7"]; then \
+  if [$BUILD_ARCH = "armv7"]; then \
     curl -o /build/jacket.tar.gz -L https://github.com/Jackett/Jackett/releases/download/${JACKETT_RELEASE}/Jackett.Binaries.LinuxARM32.tar.gz; \
-  elif [${BUILD_ARCH} = "aarch64"]; then \
+  elif [$BUILD_ARCH = "aarch64"]; then \
     curl -o /build/jacket.tar.gz -L https://github.com/Jackett/Jackett/releases/download/${JACKETT_RELEASE}/Jackett.Binaries.LinuxARM64.tar.gz; \
   else \
     curl -o /build/jacket.tar.gz -L https://github.com/Jackett/Jackett/releases/download/${JACKETT_RELEASE}/Jackett.Binaries.LinuxAMDx64.tar.gz; \
