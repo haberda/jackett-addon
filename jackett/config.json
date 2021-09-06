@@ -47,6 +47,6 @@
       "LOG_FORMAT": "{LEVEL}: {MESSAGE}"
     },
     "panel_icon": "mdi:coat-rack",
-    "snapshot_exclude": ["*.txt"],
+    "backup_exclude": ["*.txt"],
     "image": "eightiesguy/jackett-addon"
   }
