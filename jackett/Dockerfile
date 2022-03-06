@@ -3,7 +3,7 @@ ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:5.2.3
 FROM ${BUILD_FROM}
 
 ARG BUILD_ARCH
-ARG JACKETT_RELEASE=v0.20.428
+ARG JACKETT_RELEASE=v0.20.667
 
 # environment settings
 ENV XDG_DATA_HOME="/data" \
