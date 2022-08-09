@@ -48,5 +48,6 @@
     },
     "panel_icon": "mdi:coat-rack",
     "backup_exclude": ["*.txt"],
+    "init": false,
     "image": "eightiesguy/jackett-addon"
   }
