@@ -51,6 +51,12 @@ RUN ["chmod", "+x", "/etc/openvpn/up-jackett.sh"]
 RUN useradd -u 911 -U -d /config -s /bin/false abc && \
     usermod -G users abc 
 
+RUN chmod -R +x /etc/cont-init.d/
+
+RUN chmod -R +x /etc/services.d/
+
+RUN chmod -R +x /etc/openvpn/
+
 # ports and volumes
 VOLUME /data /share /config
 #EXPOSE 9117
