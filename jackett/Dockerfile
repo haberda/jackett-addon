@@ -1,9 +1,9 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:6.1.2
+ARG BUILD_FROM=ghcr.io/hassio-addons/debian-base/amd64:6.1.3
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
 ARG BUILD_ARCH
-ARG JACKETT_RELEASE=v0.20.2094
+ARG JACKETT_RELEASE=v0.20.2236
 
 # environment settings
 ENV XDG_DATA_HOME="/data" \
