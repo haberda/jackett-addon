@@ -39,7 +39,7 @@ schema:
   openvpn_username: str
   openvpn_password: str
 environment:
-  LOG_FORMAT: LEVEL: MESSAGE
+  LOG_FORMAT: "{LEVEL}: {MESSAGE}"
 panel_icon: mdi:coat-rack
 backup_exclude: ["*.txt"]
 init: false
