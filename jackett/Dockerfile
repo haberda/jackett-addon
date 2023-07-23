@@ -53,6 +53,8 @@ RUN useradd -u 911 -U -d /config -s /bin/false abc && \
 
 RUN chmod -R +x /etc/cont-init.d/
 
+RUN chmod -R +x /etc/s6-overlay/
+
 RUN chmod -R +x /etc/services.d/
 
 RUN chmod -R +x /etc/openvpn/
